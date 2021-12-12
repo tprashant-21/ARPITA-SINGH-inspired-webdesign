@@ -1,0 +1,150 @@
+@charset "UTF-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-image: url("images/background_pic.jpeg");
+	margin: 0;
+	padding: 0;
+	font-family: 'Berkshire Swash', cursive;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #584150;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-image: url("images/main text bg.png");
+	
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	padding: 10px;
+}
+
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+
+	.header {
+	
+	background-image: url("images/banner-arpita.jpg");
+		background-position: center;
+	background-repeat: no-repeat;
+		background-color:#FF0004;
+	height: 110px;
+	
+		
+}
+	
+		
+
+
+
+.nav a{
+	color: #1C238D;
+	/* [disabled]background-color: #E7E775; */
+	display: block;
+	float: left;
+	height: 20px;
+	width: 22%;
+	font-weight: bold;
+	padding-top: 20px;
+	margin-left: 2%;
+	margin-bottom: 15px;
+	text-align: center;
+	padding-bottom: 30px;
+	background-repeat: no-repeat;
+	 
+	}
+	
+	
+.nav a:hover{
+	color: #276D0C;
+	background-image: url(images/pug-rollover.png);
+}	
+	
+
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	color:#276D0C;
+}
+
+img {max-width: 75%}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	
+	border:dashed 5px #db0f42;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+	
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	
+	border:dashed 5px #db0f42;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+	
+	
+}
+.floatcenter {/*this center floats a picture*/
+              display: block; margin-left: auto; margin-right: auto;  }
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+h1 {color:#D7084F;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+}
+h2 {color: #0E4AA0
+font-family: 'Permanent Marker', cursive;
+}
+
+.ruthsays{color:red;
+font-weight: 800;
+	
+	
+}
